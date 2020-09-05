@@ -1,0 +1,64 @@
+<div class="form-group">
+  <label for="title">Title</label>
+  <input
+    placeholder='project name'
+    required
+    type="text"
+    value="<%= project.title %>"
+    name="title"
+    id="title"
+    class="form-control"
+  />
+</div>
+<div class="form-group mb-4">
+  <label for="image">Image</label>
+  <br>
+  <input
+    required
+    type="file"
+    accept="image/*"
+    name="image"
+    value=""
+    id="image"
+  />
+</div>
+<div class="form-group">
+  <label for="youtube">Youtube video embed code</label>
+  <input
+    required
+    placeholder="ex: tgbNymZ7vqY"
+    type="text"
+    value="<%= project.youtube %>"
+    name="youtube"
+    id="youtube"
+    class="form-control"
+  />
+</div>
+<div class="form-group">
+  <label for="github">Github Repository url</label>
+  <input
+    placeholder="https:// ....."
+    required
+    type="text"
+    name="github"
+    value="<%= project.github %>"
+    id="github"
+    class="form-control"
+  />
+</div>
+<div class="form-group">
+  <label for="description">Description</label>
+  <textarea
+    placeholder="Describe the project"
+    required
+    type="text"
+    name="description"
+    id="description"
+    class="form-control"
+  >
+<%= project.description %>
+  </textarea>
+</div>
+
+<a href="/" class="btn btn-secondary mr-1">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>
